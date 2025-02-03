@@ -12,7 +12,7 @@ export default function Home() {
     const jiraTicketPattern =
         /^https:\/\/extole\.atlassian\.net\/browse\/[A-Z]+-\d+$/;
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setInputValue(value);
 
@@ -28,7 +28,7 @@ export default function Home() {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (isValid) {
             alert("Лох педальный, иди сам работай!");
